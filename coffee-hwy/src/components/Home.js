@@ -9,7 +9,7 @@ function Home(){
 
                     </div>
                     <div class="col-lg-5">
-                        <p>Introduction to our website will be put in here</p>
+                        
                     </div>
                 </div>
             </div>
