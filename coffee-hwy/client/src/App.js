@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {Navigation, Footer, Home, About,Receipe,Forum} from "./components";
+import {Navigation, Footer, Home, About, Receipe ,Forum} from "./components";
 import './App.css';
 
 class App extends Component{
@@ -41,28 +41,27 @@ class App extends Component{
     return (
       <div className="App">
         <Router>
+          <header className="App-header">
           <Navigation/>
           <Switch>
             <Route path="/" exact component={()=> <Home/>}/>
             <Route path="/about" exact component={()=> <About/>}/>
-            <Route path="./receipe" exact componet={()=> <Receipe/>}/>
-            <Route path="./forum" exact component={()=> <Forum/>}/>
+            <Route path="/receipe" exact component={()=> <Receipe/>}/>
+            <Route path="/forum" exact component={()=> <Forum/>}/>
           </Switch>
-          <header className="App-header">
-            <Header/>
             <p>{this.state.response}</p>
-          <form onSubmit={this.handleSubmit}>
-            <p>
-              <strong>Post to Server:</strong>
-            </p>
-            <input
-              type="text"
-              value={this.state.post}
-              onChange={e => this.setState({ post: e.target.value })}
-            />
-            <button type="submit">Submit</button>
-          </form>
-        <p>{this.state.responseToPost}</p>
+            <form onSubmit={this.handleSubmit}>
+              <p>
+                <strong>Post to Server:</strong>
+              </p>
+              <input
+                type="text"
+                value={this.state.post}
+                onChange={e => this.setState({ post: e.target.value })}
+              />
+              <button type="submit">Submit</button>
+            </form>
+          <p>{this.state.responseToPost}</p>
           </header>
           <Footer/>
         </Router> 
@@ -71,10 +70,6 @@ class App extends Component{
   }
 }
 
-class Header extends React.Component{
-  render(){
-    return <h1>Coffee Highway</h1>
-  }
-}
+
 
 export default App;

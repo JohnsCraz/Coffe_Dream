@@ -30,16 +30,19 @@ function Navigation(props) {
                             <li class={'nav-item ${props.location.path === "/"?"active":""}'}>
                                 <Link class="nav-link" to="/about">
                                     About
+                                    <span class="sr-only">(current)</span>
                                 </Link>
                             </li>
                             <li class={'nav-item ${props.location.path === "/"?"active":""}'}>
                                 <Link class="nav-link" to="/receipe">
-                                    receipe
+                                    Receipe
+                                    <span class="sr-only">(current)</span>
                                 </Link>
                             </li>
                             <li class={'nav-item ${props.location.path === "/"?"active":""}'}>
                                 <Link class="nav-link" to="/forum">
                                     Forum
+                                    <span class="sr-only">(current)</span>
                                 </Link>
                             </li>
                         </ul>
